@@ -1,7 +1,7 @@
 .dashboard-container {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 3fr 1fr; /* Sol alan 3 kat, sağ alan 1 kat */
+  grid-template-rows: auto 1fr;
   gap: 10px;
   height: 100vh;
   padding: 10px;
@@ -20,7 +20,7 @@
 }
 
 .nav-button {
-  background-color: red;
+  background-color: #555;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -33,7 +33,28 @@
   background-color: #777;
 }
 
-.status-screen {
+.settings-screen {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Kamera ve telemetri için 3'e 1 oranı */
+  gap: 20px;
+  padding: 15px;
+}
+
+.camera-view {
+  background-color: #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  height: 100%;  /* Kameranın yüksekliğini tam yapalım */
+}
+
+.telemetry-view {
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.status-screen, .simulation-screen, .log-panel {
   background-color: #ddd;
   padding: 15px;
 }
@@ -64,5 +85,5 @@
 
 .log-panel {
   background-color: #ccc;
-  padding: 15px;
+  padding: 15px;
 }
